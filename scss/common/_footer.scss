@@ -1,20 +1,40 @@
 footer {
 	width: 100%;
 	padding: 30px 0;
-	background-color: purple;
+	background: #fff;
 	.inner {
 		width: 1180px;
-		height: 75px;
-		line-height: 75px;
 		margin: 0 auto;
-		border: 1px solid red;
-		.footermenu {
-			float: right;
+		position: relative;
+
+		.copy {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			display: block;
+			width: 340px;
+			height: 75px;
+			line-height: 75px;
+
+			span {
+				font: bold 15px/1 'arial';
+				color: #555;
+			}
+		}
+
+		ul.wrap {
+			margin-left: 500px;
 			li {
 				float: left;
-				margin-right: 30px;
+				margin-right: 20px;
+				height: 75px;
+				line-height: 75px;
+				text-align: center;
+
 				a {
 					font: bold 15px/1 'arial';
+					color: #555;
 				}
 			}
 		}

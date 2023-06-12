@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0px;
   padding: 0px;
@@ -14,344 +15,293 @@ a {
   text-decoration: none;
 }
 
-figure {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-figure video {
-  width: 100%;
-  height: 290px;
-  object-fit: cover;
-  min-height: 290px;
+.hidden {
+  display: none;
 }
 
 .clearfix::after {
-  content: "";
   display: block;
+  content: "";
   clear: both;
+}
+
+.wrap::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/* article float에서 마지막 요소 마진 0주기 위함 */
+.wrap > article:nth-last-of-type(1) {
+  margin: 0 !important;
 }
 
 #header {
   width: 100%;
-  background-color: orange;
-  background-image: url(../../img/main.mp4);
+  padding: 100px 0;
 }
-#header .inner.clearfix {
-  position: relative;
+#header .inner {
   width: 1180px;
   margin: 0 auto;
-  border: 1px solid red;
+  height: 75px;
+  line-height: 75px;
+  position: relative;
 }
-#header .inner.clearfix h1 {
+#header .inner h1 {
   float: left;
-  height: 65px;
-  line-height: 65px;
   margin-right: 50px;
 }
-#header .inner.clearfix h1 a {
-  color: #fff;
-}
-#header .inner.clearfix #gnb.clearfix {
+#header .inner #gnb {
   float: left;
   text-align: center;
 }
-#header .inner.clearfix #gnb.clearfix li {
+#header .inner #gnb li {
   float: left;
   width: 150px;
-  height: 65px;
-  line-height: 65px;
   padding: 0 1%;
 }
-#header .inner.clearfix #gnb.clearfix li a {
-  color: #fff;
-}
-#header .inner.clearfix #gnb2.clearfix {
+#header .inner #gnb2 {
   float: left;
   position: absolute;
   top: 0;
   right: 0;
+  text-align: center;
 }
-#header .inner.clearfix #gnb2.clearfix li {
+#header .inner #gnb2 li {
   float: left;
   width: 180px;
-  height: 65px;
-  line-height: 65px;
   padding: 0 1%;
-}
-#header .inner.clearfix #gnb2.clearfix li a {
-  color: #fff;
-}
-#header .inner.clearfix #gnb2.clearfix li:last-child {
-  width: 30px;
 }
 
 footer {
   width: 100%;
   padding: 30px 0;
-  background-color: purple;
+  background: #fff;
 }
 footer .inner {
   width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+footer .inner .copy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  display: block;
+  width: 340px;
   height: 75px;
   line-height: 75px;
-  margin: 0 auto;
-  border: 1px solid red;
 }
-footer .inner .footermenu {
-  float: right;
-}
-footer .inner .footermenu li {
-  float: left;
-  margin-right: 30px;
-}
-footer .inner .footermenu li a {
+footer .inner .copy span {
   font: bold 15px/1 "arial";
+  color: #555;
 }
-
-#visual {
-  width: 100%;
-  background: yellow;
+footer .inner ul.wrap {
+  margin-left: 500px;
 }
-#visual .inner {
-  position: relative;
-  width: 1180px;
-  margin: 0 auto;
-  border: 1px solid red;
-  color: #fff;
+footer .inner ul.wrap li {
+  float: left;
+  margin-right: 20px;
+  height: 75px;
+  line-height: 75px;
   text-align: center;
 }
-#visual .inner .wrap {
-  width: 300px;
-  height: 100px;
-  margin: 50px auto;
-  border: 1px solid black;
-}
-#visual .inner .search {
-  position: absolute;
-  bottom: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 600px;
-  height: 50px;
-  border: 1px solid black;
-  border-radius: 30px;
-  margin: 0 auto;
+footer .inner ul.wrap li a {
+  font: bold 15px/1 "arial";
+  color: #555;
 }
 
 #choice {
   width: 100%;
-  background-color: green;
-  padding: 80px 0;
+  background: #fff;
+  padding: 50px 0;
 }
 #choice .inner {
   width: 1180px;
   margin: 0 auto;
-  border: 1px solid #ff0000;
 }
-#choice .inner h2 {
-  width: 200px;
-  margin: 0px auto 30px;
-}
-#choice .inner .pics.clearfix {
-  width: 960px;
-  margin: 0 auto;
-}
-#choice .inner .pics.clearfix li {
-  float: left;
-  width: 300px;
-  margin: 10px 10px 40px;
-  background-color: #fff;
-}
-#choice .inner .pics.clearfix li a {
-  position: relative;
+#choice .inner .btn {
   display: block;
-  width: 100%;
-  height: 250px;
+  margin: 0 auto;
+  text-align: center;
+  width: 300px;
+  height: 50px;
+  background: red;
+  font: 16px/50px "arial";
+  border-radius: 50px;
+  color: #fff;
 }
-#choice .inner .pics.clearfix li a img {
+#choice .inner h1 {
+  text-align: center;
+  font: bold 22px/1 "arial";
+  margin-bottom: 30px;
+}
+#choice .inner .wrap {
+  width: 100%;
+  margin-bottom: 50px;
+}
+#choice .inner .wrap article {
+  float: left;
+  width: 380px;
+  height: 300px;
+  margin-right: 20px;
+  position: relative;
+}
+#choice .inner .wrap article img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
-#choice .inner .pics.clearfix li a div.more {
+#choice .inner .wrap article .icon {
   position: absolute;
   top: 0;
   right: 0;
   width: 50px;
   height: 50px;
-  background-color: rgba(226, 226, 226, 0.6117647059);
-}
-#choice .inner .pics.clearfix li a div.more.more::before {
-  background-color: #111;
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1px;
-  height: 10px;
-}
-#choice .inner .pics.clearfix li a div.more.more::after {
-  background-color: #111;
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 10px;
-  height: 1px;
-}
-#choice .inner a.btn {
-  display: block;
-  text-align: center;
-  background-color: red;
+  background: #888;
+  opacity: 0.6;
   color: #fff;
-  width: 200px;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 30px;
-  margin: 0 auto 40px;
+  font: 12px/50px "arial";
+  text-align: center;
+}
+#choice .inner .wrap article p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font: 140px/1 "arial";
+  color: #fff;
 }
 
 #diary {
   width: 100%;
-  padding: 80px 0;
-  background-color: lightblue;
+  background: #eee;
+  padding: 50px 0;
 }
 #diary .inner {
-  position: relative;
   width: 1180px;
-  padding: 10px;
   margin: 0 auto;
+  position: relative;
 }
-#diary .inner h2 {
-  margin-bottom: 20px;
-  height: 30px;
-  line-height: 30px;
+#diary .inner h1 {
+  font: bold 22px/1 "arial";
+  margin-bottom: 30px;
 }
 #diary .inner .more {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0;
+  right: 0;
+  color: #aaa;
 }
-#diary .inner .content-wrap.clearfix {
-  width: 100%;
-}
-#diary .inner .content-wrap.clearfix .content {
+#diary .inner .wrap article {
   float: left;
-  width: 366.6666666667px;
-  padding: 0 10px;
-  margin: 0 10px;
-  height: 200px;
-  background-color: #fff;
+  width: 380px;
+  height: 300px;
+  padding: 20px;
+  margin-right: 20px;
+  background: #fff;
 }
-#diary .inner .content-wrap.clearfix .content h3 {
-  margin-bottom: 15px;
-  padding-left: 10px;
-  border-left: 5px solid blue;
+#diary .inner .wrap article h2 {
+  font: bold 18px/1.1 "arial";
+  color: #333;
 }
-#diary .inner .content-wrap.clearfix .content p {
-  line-height: 1.4;
-}
-#diary .inner .content-wrap.clearfix .btns.clearfix {
-  width: 100px;
-  height: 100%;
-  margin: 0 auto;
-}
-#diary .inner .content-wrap.clearfix .btns.clearfix a {
-  float: left;
+#diary .inner .wrap article h2::before {
   display: block;
-  background-color: gray;
-  width: 10px;
-  height: 10px;
-  margin: 15px 5px;
-  border-radius: 10px;
+  content: "";
+  border-left: 5px solid blue;
+  height: 30px;
+  position: relative;
+  left: -20px;
+  top: 20px;
+}
+#diary .inner .wrap article span {
+  display: inline-block;
+  font: bold 12px/1.1 "arial";
+  color: #666;
+  margin-bottom: 30px;
+}
+#diary .inner .wrap p {
+  display: inline-block;
+  font: bold 16px/1.3 "arial";
+  color: #444;
+  margin-bottom: 30px;
 }
 
-#accessories {
+#accesssory {
   width: 100%;
+  background: #fff;
   padding: 80px 0;
-  background-color: lightcyan;
 }
-#accessories .inner {
+#accesssory .inner {
   width: 1180px;
   margin: 0 auto;
-  border: 1px solid red;
+  position: relative;
 }
-#accessories .inner h2 {
+#accesssory .inner h1 {
+  font: bold 22px/1 "arial";
+  margin-bottom: 30px;
   text-align: center;
-  width: 300px;
-  height: 20px;
-  margin: 20px auto;
-  font: 22px/1 "arial";
 }
-#accessories .inner h2 span {
-  color: gray;
+#accesssory .inner h1 span {
+  color: #444;
 }
-#accessories .inner .wrap.clearfix {
+#accesssory .inner .store {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  font: bold 16px/1 "arial";
+  color: #555;
+}
+#accesssory .inner .wrap {
   width: 100%;
+  margin-bottom: 60px;
 }
-#accessories .inner .wrap.clearfix .item-wrap {
+#accesssory .inner .wrap article {
   float: left;
-  width: 33.3333333333%;
-  padding: 20px;
-  border: 1px solid bisque;
-}
-#accessories .inner .wrap.clearfix .item-wrap .item {
-  width: 100%;
-  border: 1px solid black;
-}
-#accessories .inner .wrap.clearfix .item-wrap .item .acc {
-  position: relative;
-}
-#accessories .inner .wrap.clearfix .item-wrap .item .acc img {
-  width: 100px;
-  height: 100px;
+  width: 580px;
+  height: 200px;
   margin-right: 20px;
-}
-#accessories .inner .wrap.clearfix .item-wrap .item .acc .acc-info {
+  background: #888;
   position: relative;
-  display: inline-block;
-  padding: 5px;
-  width: 100px;
 }
-#accessories .inner .wrap.clearfix .item-wrap .item .acc .acc-info h4 {
-  font: 22px/1 "arial";
+#accesssory .inner .wrap article .pic {
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-40%);
+  text-align: center;
 }
-#accessories .inner .wrap.clearfix .item-wrap .item .acc div.more {
+#accesssory .inner .wrap article .pic img {
+  width: 80%;
+  height: 80%;
+}
+#accesssory .inner .wrap article .con {
+  width: 300px;
+  margin-left: 220px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#accesssory .inner .wrap article .con h2 {
+  font: bold 18px/1 "arial";
+  margin-bottom: 10px;
+}
+#accesssory .inner .wrap article .con p {
+  font: bold 18px/1 "arial";
+}
+#accesssory .inner .wrap article .more {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 50px;
-  height: 50px;
-  background-color: rgba(226, 226, 226, 0.6117647059);
-}
-#accessories .inner .wrap.clearfix .item-wrap .item .acc div.more.more::before {
-  background-color: #111;
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1px;
-  height: 10px;
-}
-#accessories .inner .wrap.clearfix .item-wrap .item .acc div.more.more::after {
-  background-color: #111;
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 10px;
-  height: 1px;
-}
-#accessories .inner .store {
-  width: 100px;
-  height: 20px;
-  margin: 20px auto;
+  text-align: center;
+  background: blue;
+  color: #fff;
+  border-radius: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

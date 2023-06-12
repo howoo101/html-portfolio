@@ -1,0 +1,56 @@
+@import 'reset.css';
+
+#choice {
+	width: 100%;
+	background: #fff;
+	padding: 50px 0;
+}
+
+#choice .inner {
+	width: 1180px;
+	margin: 0 auto;
+}
+
+#choice .inner .btn {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	width: 300px;
+	height: 50px;
+	background: red;
+	font: 16px/50px 'arial';
+	border-radius: 50px;
+	color: #fff;
+}
+
+#choice .inner h1 {
+	text-align: center;
+	font: bold 22px/1 'arial';
+	margin-bottom: 30px;
+}
+
+#choice .inner .wrap {
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+#choice .inner .wrap article {
+	float: left;
+	width: 380px;
+	height: 300px;
+	margin-right: 20px;
+	background: #555;
+	position: relative;
+}
+
+#choice .inner .wrap article .icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	background: #888;
+	color: #fff;
+	font: 12px/50px 'arial';
+	text-align: center;
+}

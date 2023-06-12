@@ -13,17 +13,9 @@ a {
 	text-decoration: none;
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////
 .hidden {
 	display: none;
 }
-
-.clearfix::after {
-	display: block;
-	content: '';
-	clear: both;
-}
-
 .wrap::after {
 	display: block;
 	content: '';
@@ -33,4 +25,3 @@ a {
 .wrap > article:nth-last-of-type(1) {
 	margin: 0 !important;
 }
-//////////////////////////////////////////////////////////////////////////////////////////////////

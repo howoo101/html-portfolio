@@ -1,75 +1,39 @@
-figure {
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	video {
-		width: 100%;
-		height: 290px;
-		object-fit: cover;
-		min-height: 290px;
-	}
-}
-
-.clearfix::after {
-	content: '';
-	display: block;
-	clear: both;
-}
-
 #header {
 	width: 100%;
-	background-color: orange;
-	background-image: url(../../img/main.mp4);
-	.inner.clearfix {
-		position: relative;
+	padding: 100px 0;
+	.inner {
 		width: 1180px;
 		margin: 0 auto;
-		border: 1px solid red;
+		height: 75px;
+		line-height: 75px;
+		position: relative;
 
 		h1 {
 			float: left;
-			height: 65px;
-			line-height: 65px;
 			margin-right: 50px;
-			a {
-				color: #fff;
-			}
 		}
 
-		#gnb.clearfix {
+		#gnb {
 			float: left;
-
 			text-align: center;
+
 			li {
 				float: left;
 				width: 150px;
-				height: 65px;
-				line-height: 65px;
 				padding: 0 1%;
-				a {
-					color: #fff;
-				}
 			}
 		}
 
-		#gnb2.clearfix {
+		#gnb2 {
 			float: left;
 			position: absolute;
 			top: 0;
 			right: 0;
+			text-align: center;
 			li {
 				float: left;
 				width: 180px;
-				height: 65px;
-				line-height: 65px;
 				padding: 0 1%;
-				a {
-					color: #fff;
-				}
-				&:last-child {
-					width: 30px;
-				}
 			}
 		}
 	}
