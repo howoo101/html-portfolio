@@ -1,6 +1,11 @@
 #header {
-	width: 100%;
-	padding: 100px 0;
+	width: 90vw;
+	padding: 30px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+
 	.inner {
 		width: 1180px;
 		margin: 0 auto;
@@ -11,6 +16,10 @@
 		h1 {
 			float: left;
 			margin-right: 50px;
+			a {
+				font: bold 30px/1 'arial';
+				color: #333;
+			}
 		}
 
 		#gnb {
@@ -19,21 +28,24 @@
 
 			li {
 				float: left;
-				width: 150px;
-				padding: 0 1%;
+				padding: 0 20px;
+				a {
+					font: bold 16px/1 'arial';
+					color: #333;
+				}
 			}
 		}
 
-		#gnb2 {
-			float: left;
-			position: absolute;
-			top: 0;
-			right: 0;
+		#sns {
+			float: right;
 			text-align: center;
 			li {
 				float: left;
-				width: 180px;
-				padding: 0 1%;
+				padding: 0 20px;
+				a {
+					font: bold 16px/1 'arial';
+					color: #333;
+				}
 			}
 		}
 	}

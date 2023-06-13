@@ -36,9 +36,17 @@ a {
   margin: 0 !important;
 }
 
+.wrap > li:nth-last-of-type(1) {
+  margin: 0 !important;
+}
+
 #header {
-  width: 100%;
-  padding: 100px 0;
+  width: 90vw;
+  padding: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 #header .inner {
   width: 1180px;
@@ -51,26 +59,33 @@ a {
   float: left;
   margin-right: 50px;
 }
+#header .inner h1 a {
+  font: bold 30px/1 "arial";
+  color: #333;
+}
 #header .inner #gnb {
   float: left;
   text-align: center;
 }
 #header .inner #gnb li {
   float: left;
-  width: 150px;
-  padding: 0 1%;
+  padding: 0 20px;
 }
-#header .inner #gnb2 {
-  float: left;
-  position: absolute;
-  top: 0;
-  right: 0;
+#header .inner #gnb li a {
+  font: bold 16px/1 "arial";
+  color: #333;
+}
+#header .inner #sns {
+  float: right;
   text-align: center;
 }
-#header .inner #gnb2 li {
+#header .inner #sns li {
   float: left;
-  width: 180px;
-  padding: 0 1%;
+  padding: 0 20px;
+}
+#header .inner #sns li a {
+  font: bold 16px/1 "arial";
+  color: #333;
 }
 
 footer {
@@ -88,7 +103,6 @@ footer .inner .copy {
   top: 0;
   left: 0;
   display: block;
-  display: block;
   width: 340px;
   height: 75px;
   line-height: 75px;
@@ -98,7 +112,7 @@ footer .inner .copy span {
   color: #555;
 }
 footer .inner ul.wrap {
-  margin-left: 500px;
+  margin-left: 700px;
 }
 footer .inner ul.wrap li {
   float: left;
@@ -110,6 +124,49 @@ footer .inner ul.wrap li {
 footer .inner ul.wrap li a {
   font: bold 15px/1 "arial";
   color: #555;
+}
+
+#visual {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+#visual .lower {
+  z-index: 2;
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -250px;
+  text-align: center;
+}
+#visual .lower h2 {
+  font: bold 42px/1 "airal";
+  color: #fff;
+  margin-bottom: 20px;
+}
+#visual .lower p {
+  font: bold 22px/1 "airal";
+  color: #fff;
+}
+#visual .upper {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  clip-path: circle(390vh at 50% -300vh);
+  opacity: 0.9;
+}
+#visual .upper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #choice {
