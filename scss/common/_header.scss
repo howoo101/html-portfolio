@@ -48,5 +48,38 @@
 				}
 			}
 		}
+
+		.btnCall {
+			display: none;
+			font-size: 20px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			color: #333;
+		}
 	}
+}
+
+@media screen and (max-width: $tablet) {
+	#header {
+		width: 90vw;
+		padding: 30px;
+
+		.inner {
+			width: 100%;
+
+			h1 {
+				margin-right: 50px;
+			}
+			nav {
+				display: none;
+			}
+			.btnCall {
+				display: block;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
 }
