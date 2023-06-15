@@ -2,6 +2,7 @@
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 ul,
@@ -13,28 +14,16 @@ a {
 	text-decoration: none;
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////
-.hidden {
-	display: none;
+button {
+	border: none;
+	cursor: pointer;
 }
 
-.clearfix::after {
-	display: block;
-	content: '';
-	clear: both;
-}
 
-.wrap::after {
-	display: block;
-	content: '';
-	clear: both;
+.center {
+	max-width: 1180px;
+	min-width: 640px;
+	padding: 0px 20px;
+	box-sizing: border-box;
+	margin: 40px auto;
 }
-/* article float에서 마지막 요소 마진 0주기 위함 */
-.wrap > article:nth-last-of-type(1) {
-	margin: 0 !important;
-}
-
-.wrap > li:nth-last-of-type(1) {
-	margin: 0 !important;
-}
-//////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,87 +1,73 @@
-#accesssory {
-	width: 100%;
-	background: #fff;
-	padding: 80px 0;
+#accessory {
+	h2 {
+		font-weight: bold;
+		font-size: 22px;
+		margin-bottom: 40px;
+		text-align: center;
 
-	.inner {
-		width: 1180px;
-		margin: 0 auto;
-		position: relative;
-
-		h1 {
-			font: bold 22px/1 'arial';
-			margin-bottom: 30px;
-			text-align: center;
-
-			span {
-				color: #444;
-			}
+		span {
+			font-weight: normal;
+			color: #444;
 		}
+	}
 
-		.store {
-			display: block;
-			width: 150px;
-			margin: 0 auto;
-			font: bold 16px/1 'arial';
-			color: #555;
-		}
+	.accessory_content {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 40px;
 
-		.wrap {
-			width: 100%;
-			margin-bottom: 60px;
+		& > div:nth-child(n) {
+			position: relative;
+			display: flex;
+			flex: 1;
+			padding: 20px;
+			height: 200px;
+			margin-right: 20px;
+			background: #888;
 
-			article {
-				float: left;
-				width: 580px;
-				height: 200px;
+			img {
+				flex: 0;
+				width: 150px;
+				height: 150px;
 				margin-right: 20px;
-				background: #888;
+			}
+
+			.accessory_item {
 				position: relative;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				flex: 1;
 
-				.pic {
-					width: 200px;
-					height: 100%;
-					position: absolute;
-					top: 50%;
-					left: 0;
-					transform: translateY(-40%);
-					text-align: center;
-					img {
-						width: 80%;
-						height: 80%;
-					}
-				}
-
-				.con {
-					width: 300px;
-					margin-left: 220px;
-					position: relative;
-					top: 50%;
-					transform: translateY(-50%);
-
-					h2 {
-						font: bold 18px/1 'arial';
-						margin-bottom: 10px;
-					}
-
-					p {
-						font: bold 18px/1 'arial';
-					}
-				}
-
-				.more {
-					width: 50px;
-					height: 50px;
-					line-height: 50px;
-					position: absolute;
-					bottom: 0;
-					right: 0;
-					text-align: center;
-					background: blue;
-					color: #fff;
-					border-radius: 30px;
+				h3 {
+					font-weight: bold;
+					font-size: 18px;
+					margin-bottom: 10px;
 				}
 			}
+
+			.accessory_more {
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				background: blue;
+				color: #fff;
+				border-radius: 30px;
+			}
 		}
+		
+		& > div:last-child {
+			margin-right: 0px;
+		}
+	}
+
+	.store {
+		display: block;
+		font-weight: bold;
+		font-size: 16px;
+		text-align: center;
+		color: #555;
 	}
 }
