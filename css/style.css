@@ -141,9 +141,7 @@ footer .inner {
   position: relative;
 }
 footer .inner .copy {
-  position: absolute;
-  top: 0;
-  left: 0;
+  float: left;
   display: block;
   width: 340px;
   height: 75px;
@@ -153,21 +151,68 @@ footer .inner .copy span {
   font: bold 15px/1 "arial";
   color: #555;
 }
-footer .inner ul.wrap {
-  margin-left: 700px;
+footer .inner .link {
+  float: right;
 }
-footer .inner ul.wrap li {
+footer .inner .link li {
   float: left;
   margin-right: 20px;
   height: 75px;
   line-height: 75px;
   text-align: center;
 }
-footer .inner ul.wrap li a {
+footer .inner .link li a {
   font: bold 15px/1 "arial";
   color: #555;
 }
 
+@media screen and (max-width: 1179px) {
+  footer {
+    width: 100%;
+    padding: 30px 0;
+    background: #fff;
+  }
+  footer .inner {
+    width: 100%;
+  }
+  footer .inner .copy {
+    float: left;
+    display: block;
+    width: 340px;
+    height: 75px;
+    line-height: 75px;
+  }
+  footer .inner .copy span {
+    font: bold 15px/1 "arial";
+    color: #555;
+  }
+  footer .inner .link {
+    float: right;
+  }
+  footer .inner .link li {
+    float: left;
+    margin-right: 20px;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+  }
+  footer .inner .link li a {
+    font: bold 15px/1 "arial";
+    color: #555;
+  }
+}
+@media screen and (max-width: 539px) {
+  footer {
+    padding: 30px 0;
+    background: #fff;
+  }
+  footer .inner .copy {
+    width: 100%;
+  }
+  footer .inner .link {
+    width: 100%;
+  }
+}
 #visual {
   width: 100%;
   height: 100vh;
@@ -503,7 +548,7 @@ footer .inner ul.wrap li a {
   }
   #accesssory .inner .wrap article .con {
     width: 160px;
-    margin-left: 120px;
+    margin-left: 140px;
   }
   #accesssory .inner .wrap article .con h2 {
     font: bold 18px/1 "arial";
