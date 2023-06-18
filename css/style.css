@@ -242,12 +242,17 @@ footer .inner ul.wrap li a {
 }
 #choice .inner .wrap article {
   float: left;
-  width: 380px;
-  padding-bottom: 100%;
+  width: 32%;
   margin-right: 20px;
   position: relative;
 }
+#choice .inner .wrap article:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
 #choice .inner .wrap article img {
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -272,6 +277,44 @@ footer .inner ul.wrap li a {
   color: #fff;
 }
 
+@media screen and (max-width: 1179px) {
+  #choice .inner {
+    width: 100%;
+  }
+  #choice .inner .btn {
+    width: 200px;
+    height: 50px;
+  }
+  #choice .inner .wrap {
+    width: 100%;
+  }
+  #choice .inner .wrap article {
+    margin-right: 10px;
+  }
+  #choice .inner .wrap article p {
+    font: 100px/1 "arial";
+  }
+}
+@media screen and (max-width: 539px) {
+  #choice .inner {
+    width: 100%;
+  }
+  #choice .inner .btn {
+    width: 150px;
+    height: 50px;
+  }
+  #choice .inner .wrap {
+    width: 100%;
+  }
+  #choice .inner .wrap article {
+    float: none;
+    width: 80%;
+    margin: 10% auto !important;
+  }
+  #choice .inner .wrap article p {
+    font: 100px/1 "arial";
+  }
+}
 #diary {
   width: 100%;
   background: #eee;
