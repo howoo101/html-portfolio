@@ -32,9 +32,15 @@
 			article {
 				float: left;
 				width: 380px;
-				height: 300px;
+				padding-bottom: 100%;
 				margin-right: 20px;
 				position: relative;
+
+				// &:after {
+				// 	content: '';
+				// 	display: block;
+				// 	padding-bottom: 100%;
+				// }
 
 				img {
 					width: 100%;
