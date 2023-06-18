@@ -85,3 +85,93 @@
 		}
 	}
 }
+
+@media screen and (max-width: $tablet) {
+	#accesssory {
+		.inner {
+			width: 100%;
+
+			.wrap {
+				width: 100%;
+				margin-bottom: 60px;
+
+				article {
+					float: left;
+					width: 48%;
+					height: 200px;
+					margin-right: 2%;
+
+					.pic {
+						width: 120px;
+						height: 100%;
+
+						img {
+							width: 80%;
+							height: 80%;
+						}
+					}
+
+					.con {
+						width: 160px;
+						margin-left: 120px;
+						h2 {
+							font: bold 18px/1 'arial';
+							margin-bottom: 10px;
+						}
+
+						p {
+							font: bold 18px/1 'arial';
+						}
+					}
+
+					.more {
+						width: 50px;
+						height: 50px;
+						line-height: 50px;
+						position: absolute;
+						bottom: 0;
+						right: 0;
+						text-align: center;
+						background: blue;
+						color: #fff;
+						border-radius: 30px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	#accesssory {
+		.inner {
+			width: 100%;
+
+			.wrap {
+				width: 100%;
+				margin-bottom: 60px;
+
+				article {
+					width: 100%;
+					height: 200px;
+					margin-bottom: 20px;
+
+					.pic {
+						width: 200px;
+						height: 100%;
+
+						img {
+							width: 80%;
+							height: 80%;
+						}
+					}
+
+					.con {
+						width: 300px;
+						margin-left: 220px;
+					}
+				}
+			}
+		}
+	}
+}
