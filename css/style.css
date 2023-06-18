@@ -243,7 +243,7 @@ footer .inner ul.wrap li a {
 #choice .inner .wrap article {
   float: left;
   width: 32%;
-  margin-right: 20px;
+  margin-right: 2%;
   position: relative;
 }
 #choice .inner .wrap article:after {
@@ -287,9 +287,6 @@ footer .inner ul.wrap li a {
   }
   #choice .inner .wrap {
     width: 100%;
-  }
-  #choice .inner .wrap article {
-    margin-right: 10px;
   }
   #choice .inner .wrap article p {
     font: 100px/1 "arial";
@@ -335,12 +332,17 @@ footer .inner ul.wrap li a {
   right: 0;
   color: #aaa;
 }
+#diary .inner .wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 #diary .inner .wrap article {
   float: left;
-  width: 380px;
+  width: 32%;
   height: 300px;
   padding: 20px;
-  margin-right: 20px;
+  margin-right: 2%;
   background: #fff;
 }
 #diary .inner .wrap article h2 {
@@ -362,13 +364,43 @@ footer .inner ul.wrap li a {
   color: #666;
   margin-bottom: 30px;
 }
-#diary .inner .wrap p {
+#diary .inner .wrap article p {
   display: inline-block;
   font: bold 16px/1.3 "arial";
   color: #444;
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 1179px) {
+  #diary .inner {
+    width: 100%;
+  }
+  #diary .inner .wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  #diary .inner .wrap article {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 539px) {
+  #diary .inner {
+    width: 100%;
+  }
+  #diary .inner .wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  #diary .inner .wrap article {
+    float: none;
+    width: 80%;
+    height: 100%;
+    margin: 10% auto !important;
+    margin-left: 10%;
+  }
+}
 #accesssory {
   width: 100%;
   background: #fff;

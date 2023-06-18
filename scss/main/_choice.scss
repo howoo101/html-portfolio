@@ -32,7 +32,7 @@
 			article {
 				float: left;
 				width: 32%;
-				margin-right: 20px;
+				margin-right: 2%;
 				position: relative;
 
 				&:after {
@@ -85,8 +85,6 @@
 			.wrap {
 				width: 100%;
 				article {
-					margin-right: 10px;
-
 					p {
 						font: 100px/1 'arial';
 					}

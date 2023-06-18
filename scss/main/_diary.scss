@@ -2,6 +2,7 @@
 	width: 100%;
 	background: #eee;
 	padding: 50px 0;
+
 	.inner {
 		width: 1180px;
 		margin: 0 auto;
@@ -20,12 +21,16 @@
 		}
 
 		.wrap {
+			position: relative;
+			width: 100%;
+			height: 100%;
+
 			article {
 				float: left;
-				width: 380px;
+				width: 32%;
 				height: 300px;
 				padding: 20px;
-				margin-right: 20px;
+				margin-right: 2%;
 				background: #fff;
 
 				h2 {
@@ -48,13 +53,53 @@
 					color: #666;
 					margin-bottom: 30px;
 				}
-			}
 
-			p {
-				display: inline-block;
-				font: bold 16px/1.3 'arial';
-				color: #444;
-				margin-bottom: 30px;
+				p {
+					display: inline-block;
+					font: bold 16px/1.3 'arial';
+					color: #444;
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	#diary {
+		.inner {
+			width: 100%;
+
+			.wrap {
+				position: relative;
+				width: 100%;
+				height: 100%;
+
+				article {
+					height: 350px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	#diary {
+		.inner {
+			width: 100%;
+
+			.wrap {
+				position: relative;
+				width: 100%;
+				height: 100%;
+
+				article {
+					float: none;
+					width: 80%;
+					height: 100%;
+					margin: 10% auto !important;
+					margin-left: 10%;
+				}
 			}
 		}
 	}
