@@ -31,9 +31,19 @@ button {
 #header {
   position: fixed;
   width: 100%;
-  padding: 30px;
+  padding: 30px 100px;
   box-sizing: border-box;
   z-index: 1000;
+}
+#header.on, #header.off {
+  transition-property: background-color;
+  transition-duration: 1.5s;
+}
+#header.on {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+#header.off {
+  background-color: rgba(0, 0, 0, 0);
 }
 #header > .hd_content {
   display: flex;
@@ -41,7 +51,6 @@ button {
   align-items: center;
   flex-wrap: wrap;
   min-height: 75px;
-  padding: 0px;
   font-weight: bold;
   color: #333;
 }
@@ -49,30 +58,31 @@ button {
   display: inline-block;
   color: #333;
 }
+#header > .hd_content a:hover {
+  color: dodgerblue;
+}
 #header > .hd_content #logo {
   font-size: 30px;
+  margin-right: 50px;
 }
 #header > .hd_content #gnb {
-  margin: 0 40px;
+  margin-right: auto;
 }
 #header > .hd_content #gnb ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#header > .hd_content #gnb ul li {
-  display: inline-block;
-}
 #header > .hd_content #gnb ul li a {
   padding: 20px;
   font-size: 16px;
   transition: 0.3s;
 }
-#header > .hd_content #gnb ul li a:hover {
-  color: #f00;
+#header > .hd_content > .search > :nth-of-type(n) {
+  padding: 20px;
 }
-#header > .hd_content > .search span {
-  margin-right: 10px;
+#header > .hd_content > .search > :nth-last-of-type(1) {
+  padding-right: 0;
 }
 
 #footer {
