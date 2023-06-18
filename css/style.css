@@ -3,6 +3,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: Helvetica, sans-serif, arial;
 }
 
 ul,
@@ -41,53 +42,72 @@ a {
 }
 
 #header {
-  width: 90vw;
-  padding: 30px;
+  width: 100vw;
+  padding: 30px 150px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
 }
-#header .inner {
-  width: 1180px;
-  margin: 0 auto;
+#header.on, #header.off {
+  transition-property: background-color;
+  transition-duration: 1.5s;
+}
+#header.on {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+#header.off {
+  background-color: rgba(0, 0, 0, 0);
+}
+#header .wrap {
+  width: 100%;
   height: 75px;
   line-height: 75px;
   position: relative;
 }
-#header .inner h1 {
+#header .wrap h1 {
   float: left;
   margin-right: 50px;
 }
-#header .inner h1 a {
+#header .wrap h1 a {
   font: bold 30px/1 "arial";
   color: #333;
 }
-#header .inner #gnb {
+#header .wrap h1 a:hover {
+  color: dodgerblue;
+}
+#header .wrap #gnb a,
+#header .wrap #search a {
+  font-weight: bold;
+  color: #333;
+}
+#header .wrap #gnb a:hover,
+#header .wrap #search a:hover {
+  color: dodgerblue;
+}
+#header .wrap #gnb {
   float: left;
   text-align: center;
 }
-#header .inner #gnb li {
+#header .wrap #gnb li {
   float: left;
   padding: 0 20px;
 }
-#header .inner #gnb li a {
-  font: bold 16px/1 "arial";
-  color: #333;
+#header .wrap #gnb li a {
+  font-size: 16px;
 }
-#header .inner #sns {
+#header .wrap #search {
   float: right;
   text-align: center;
 }
-#header .inner #sns li {
+#header .wrap #search li {
   float: left;
   padding: 0 20px;
 }
-#header .inner #sns li a {
-  font: bold 16px/1 "arial";
-  color: #333;
+#header .wrap #search li a {
+  font: 16px;
 }
-#header .inner .btnCall {
+#header .wrap .btnCall {
   display: none;
   font-size: 20px;
   position: absolute;
@@ -98,19 +118,15 @@ a {
 
 @media screen and (max-width: 1179px) {
   #header {
-    width: 90vw;
-    padding: 30px;
+    padding: 30px 100px;
   }
-  #header .inner {
-    width: 100%;
+  #header .wrap h1 {
+    margin-right: 30px;
   }
-  #header .inner h1 {
-    margin-right: 50px;
-  }
-  #header .inner nav {
+  #header .wrap nav {
     display: none;
   }
-  #header .inner .btnCall {
+  #header .wrap .btnCall {
     display: block;
   }
 }
@@ -227,7 +243,7 @@ footer .inner ul.wrap li a {
 #choice .inner .wrap article {
   float: left;
   width: 380px;
-  height: 300px;
+  padding-bottom: 100%;
   margin-right: 20px;
   position: relative;
 }
@@ -353,7 +369,7 @@ footer .inner ul.wrap li a {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(50%);
+  transform: translateY(-40%);
   text-align: center;
 }
 #accesssory .inner .wrap article .pic img {
