@@ -661,4 +661,57 @@ footer .inner .link li a {
   color: #666;
 }
 
+.signup form table {
+  width: 100%;
+  border: none;
+}
+.signup form table th,
+.signup form table td {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  padding: 16px 25px;
+}
+.signup form table th {
+  width: 20%;
+}
+.signup form table th input[type=submit],
+.signup form table th input[type=reset] {
+  width: 30%;
+  height: 40px;
+  border: 1px solid #333;
+  margin: 10px;
+  font: bold 14px/40px "arial";
+  color: #555;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.signup form table th input[type=submit]:hover,
+.signup form table th input[type=reset]:hover {
+  background: #333;
+  color: #fff;
+}
+.signup form table td {
+  border-left: 1px solid #aaa;
+}
+.signup form table td input[type=text],
+.signup form table td input[type=password],
+.signup form table td input[type=email],
+.signup form table td select,
+.signup form table td textarea {
+  width: 60%;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 10px;
+  border: 1px solid #aaa;
+  resize: none;
+}
+.signup form table td input[type=checkbox],
+.signup form table td input[type=radio] {
+  margin-right: 30px;
+}
+.signup form table td p {
+  color: hotpink;
+  margin-top: 5px;
+  font: 11px/1 "맑은 고딕";
+}
+
 /*# sourceMappingURL=style.css.map */

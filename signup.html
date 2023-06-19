@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/03f02fa416.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/form.js"></script>
+</head>
+
+<body>
+  <header id="header">
+    <div class="wrap">
+      <h1>
+        <a href="index.html">LOVE TRIP</a>
+      </h1>
+      <nav>
+        <ul id="gnb" class="clearfix">
+          <li><a href="department.html">DEPARTMENT</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="youtube.html">YOUTUBE</a></li>
+          <li><a href="location.html">LOCATION</a></li>
+        </ul>
+        <ul id="search" class="clearfix">
+          <li><a href="signup.html">SIGN-UP</a></li>
+          <li><a href="#">FIND A DESTINATION</a></li>
+          <li>
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <a href="" class="btnCall"><i class="fas fa-bars"></i></a>
+    </div>
+  </header>
+
+  <section class="content signup">
+    <figure class="subVisual"></figure>
+    <div class="inner">
+      <h1>SIGN UP Page</h1>
+      <form action="result.html" method="get" id="form">
+        <fieldset>
+          <table>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  <label for="userId">User ID</label>
+                </th>
+                <td>
+                  <input type="text" name="userid" id="userid" placeholder="아이디를 입력하세요.">
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">
+                  <label for="pwd1">Password</label>
+                </th>
+                <td>
+                  <input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력하세요.">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="pwd2">Re Password</label>
+                </th>
+                <td>
+                  <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 재 입력하세요.">
+                </td>
+              </tr>
+
+              <tr>
+                <th><label for="email">E-mail</label></th>
+                <td>
+                  <input type="email" name="email" id="email" placeholder="이메일 주소를 입력하세요."></input>
+                </td>
+              </tr>
+
+              <tr>
+                <th scrope="row">
+                  <label for="edu">Education</label>
+                </th>
+                <td>
+                  <select name="edu" id="edu">
+                    <option value="">최종학력을 선택해주세요</option>
+                    <option value="elementary school">초등학교 졸업</option>
+                    <option value="middle school">중학교 졸업</option>
+                    <option value="high school">고등학교 졸업</option>
+                    <option value="college">대학교 졸업</option>
+                  </select>
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">
+                  Gender
+                </th>
+                <td>
+                  <label for="male">Male</label>
+                  <input type="radio" name="gender" id="male" value="male">
+
+                  <label for="female">Female</label>
+                  <input type="radio" name="gender" id="female" value="female">
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">
+                  hobby
+                </th>
+                <td>
+                  <label for="sports">Sports</label>
+                  <input type="checkbox" name="hobby" id="sports" value="sports">
+
+                  <label for="music">Music</label>
+                  <input type="checkbox" name="hobby" id="music" value="music">
+
+                  <label for="game">Game</label>
+                  <input type="checkbox" name="hobby" id="game" value="game">
+
+                  <label for="reading">Reading</label>
+                  <input type="checkbox" name="hobby" id="reading" value="reading">
+                </td>
+              </tr>
+
+              <tr>
+                <th><label for="'comments">Comments</label></th>
+                <td>
+                  <textarea name="comments" id="comments" cols="30" rows="4" placeholder="남기는 글을 입력하세요."></textarea>
+                </td>
+              </tr>
+
+              <tr>
+                <th colspan="2">
+                  <input type="reset" value="리셋">
+                  <input type="submit" value="가입">
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
+      </form>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="inner clearfix">
+      <a href="#" class="copy">
+        <span>COPYRIGHT &copy 2023 ALL RIGHTS RESERVED</span></a>
+      <ul class="wrap link clearfix">
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">CONTACT</a></li>
+        <li><a href="#">Terms & Condition</a></li>
+        <li><a href="#">PRIVACY POLICY</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>
