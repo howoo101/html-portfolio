@@ -213,6 +213,40 @@ footer .inner .link li a {
     width: 100%;
   }
 }
+.content {
+  width: 100%;
+}
+.content .subVisual {
+  width: 100%;
+  height: 250px;
+  background: gray;
+}
+.content .inner {
+  padding: 150px 10vw 100px;
+  min-height: 800px;
+}
+.content .inner h1 {
+  font: normal 50px/1 "arial";
+  color: #333;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1179px) {
+  .content .inner {
+    padding: 100px 10vw 80px;
+  }
+  .content .inner h1 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .content .inner {
+    padding: 80px 40px 60px;
+  }
+  .content .inner h1 {
+    font-size: 24px;
+  }
+}
 #visual {
   width: 100%;
   height: 100vh;
