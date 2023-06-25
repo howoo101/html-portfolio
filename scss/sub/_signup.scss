@@ -34,6 +34,10 @@
 			td {
 				border-left: 1px solid #aaa;
 
+				&.error {
+					border: 2px solid crimson;
+				}
+
 				input[type='text'],
 				input[type='password'],
 				input[type='email'],
@@ -51,9 +55,9 @@
 				}
 
 				p {
-					color: hotpink;
+					color: crimson;
 					margin-top: 5px;
-					font: 11px/1 '맑은 고딕';
+					font: bold 11px/1 '맑은 고딕';
 				}
 			}
 		}
