@@ -479,36 +479,36 @@ footer .inner .link li a {
     margin-left: 10%;
   }
 }
-#accesssory {
+#accessory {
   width: 100%;
   background: #fff;
   padding: 80px 0;
 }
-#accesssory .inner {
+#accessory .inner {
   width: 1180px;
   margin: 0 auto;
   position: relative;
 }
-#accesssory .inner h1 {
+#accessory .inner h1 {
   font: bold 22px/1 "arial";
   margin-bottom: 30px;
   text-align: center;
 }
-#accesssory .inner h1 span {
+#accessory .inner h1 span {
   color: #444;
 }
-#accesssory .inner .store {
+#accessory .inner .store {
   display: block;
   width: 150px;
   margin: 0 auto;
   font: bold 16px/1 "arial";
   color: #555;
 }
-#accesssory .inner .wrap {
+#accessory .inner .wrap {
   width: 100%;
   margin-bottom: 60px;
 }
-#accesssory .inner .wrap article {
+#accessory .inner .wrap article {
   float: left;
   width: 580px;
   height: 200px;
@@ -516,7 +516,7 @@ footer .inner .link li a {
   background: #888;
   position: relative;
 }
-#accesssory .inner .wrap article .pic {
+#accessory .inner .wrap article .pic {
   width: 200px;
   height: 100%;
   position: absolute;
@@ -525,25 +525,25 @@ footer .inner .link li a {
   transform: translateY(-40%);
   text-align: center;
 }
-#accesssory .inner .wrap article .pic img {
+#accessory .inner .wrap article .pic img {
   width: 80%;
   height: 80%;
 }
-#accesssory .inner .wrap article .con {
+#accessory .inner .wrap article .con {
   width: 300px;
   margin-left: 220px;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
-#accesssory .inner .wrap article .con h2 {
+#accessory .inner .wrap article .con h2 {
   font: bold 18px/1 "arial";
   margin-bottom: 10px;
 }
-#accesssory .inner .wrap article .con p {
+#accessory .inner .wrap article .con p {
   font: bold 18px/1 "arial";
 }
-#accesssory .inner .wrap article .more {
+#accessory .inner .wrap article .more {
   width: 50px;
   height: 50px;
   line-height: 50px;
@@ -557,39 +557,39 @@ footer .inner .link li a {
 }
 
 @media screen and (max-width: 1179px) {
-  #accesssory .inner {
+  #accessory .inner {
     width: 100%;
   }
-  #accesssory .inner .wrap {
+  #accessory .inner .wrap {
     width: 100%;
     margin-bottom: 60px;
   }
-  #accesssory .inner .wrap article {
+  #accessory .inner .wrap article {
     float: left;
     width: 48%;
     height: 200px;
     margin-right: 2%;
   }
-  #accesssory .inner .wrap article .pic {
+  #accessory .inner .wrap article .pic {
     width: 120px;
     height: 100%;
   }
-  #accesssory .inner .wrap article .pic img {
+  #accessory .inner .wrap article .pic img {
     width: 80%;
     height: 80%;
   }
-  #accesssory .inner .wrap article .con {
+  #accessory .inner .wrap article .con {
     width: 160px;
     margin-left: 140px;
   }
-  #accesssory .inner .wrap article .con h2 {
+  #accessory .inner .wrap article .con h2 {
     font: bold 18px/1 "arial";
     margin-bottom: 10px;
   }
-  #accesssory .inner .wrap article .con p {
+  #accessory .inner .wrap article .con p {
     font: bold 18px/1 "arial";
   }
-  #accesssory .inner .wrap article .more {
+  #accessory .inner .wrap article .more {
     width: 50px;
     height: 50px;
     line-height: 50px;
@@ -603,29 +603,64 @@ footer .inner .link li a {
   }
 }
 @media screen and (max-width: 539px) {
-  #accesssory .inner {
+  #accessory .inner {
     width: 100%;
   }
-  #accesssory .inner .wrap {
+  #accessory .inner .wrap {
     width: 100%;
     margin-bottom: 60px;
   }
-  #accesssory .inner .wrap article {
+  #accessory .inner .wrap article {
     width: 100%;
     height: 200px;
     margin-bottom: 20px;
   }
-  #accesssory .inner .wrap article .pic {
+  #accessory .inner .wrap article .pic {
     width: 200px;
     height: 100%;
   }
-  #accesssory .inner .wrap article .pic img {
+  #accessory .inner .wrap article .pic img {
     width: 80%;
     height: 80%;
   }
-  #accesssory .inner .wrap article .con {
+  #accessory .inner .wrap article .con {
     width: 300px;
     margin-left: 220px;
+  }
+}
+#naviScroll {
+  position: fixed;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+}
+#naviScroll li {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #333;
+  background: #fff;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#naviScroll li.on {
+  height: 100px;
+  border: 1px solid #fff;
+  background: #333;
+}
+
+@media screen and (max-width: 1179px) {
+  #scroll_navi {
+    right: 30px;
+  }
+  #scroll_navi li {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media screen and (max-width: 539px) {
+  #scroll_navi {
+    right: 20px;
   }
 }
 .department .inner .wrap article {
