@@ -1,0 +1,101 @@
+$color_1: #111;
+$color_2: #666;
+$color_3: orange;
+
+@import 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap';
+
+.youtube {
+	.inner {
+		.wrap {
+			article {
+				width: 100%;
+				padding: 20px 0px;
+				border-bottom: 1px solid #ddd;
+				overflow: hidden;
+				&::after {
+					content: '';
+					display: block;
+					clear: both;
+				}
+				h2 {
+					width: 40%;
+					float: left;
+					padding: 40px 20px 40px 0;
+					font: normal 38px/1 'work sans';
+					color: $color_1;
+				}
+				.txt {
+					width: 30%;
+					float: left;
+					padding-right: 20px;
+
+					p {
+						font: 14px/1.2 'arial';
+						color: $color_2;
+						margin-bottom: 40px;
+					}
+					span {
+						font: 12px/1 'arial';
+						color: $color_3;
+					}
+				}
+				.pic {
+					width: 30%;
+					height: 200px;
+					float: left;
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.youtube {
+		.inner {
+			.wrap {
+				article {
+					h2 {
+						width: 50%;
+						font-size: 28px;
+					}
+					.txt {
+						width: 50%;
+						padding-right: 0px;
+					}
+					.pic {
+						width: 100%;
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.youtube {
+		.inner {
+			.wrap {
+				article {
+					h2 {
+						width: 100%;
+						font-size: 20px;
+						padding-right: 0px;
+					}
+					.txt {
+						width: 100%;
+					}
+					.pic {
+						width: 100%;
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+	}
+}

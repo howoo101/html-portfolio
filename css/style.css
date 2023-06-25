@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap';
 * {
   margin: 0px;
   padding: 0px;
@@ -245,6 +246,42 @@ footer .inner .link li a {
     font-size: 24px;
   }
 }
+.popup {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0px;
+  padding: 100px;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.popup.on {
+  opacity: 1;
+}
+.popup .content {
+  width: 100%;
+  height: 100%;
+}
+.popup .content iframe,
+.popup .content video,
+.popup .content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+}
+.popup .close {
+  font: bold 14px/1 "arial";
+  color: #fff;
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  cursor: pointer;
+}
+
 #visual {
   width: 100%;
   height: 100vh;
@@ -694,6 +731,87 @@ footer .inner .link li a {
   color: #666;
 }
 
+@media screen and (max-width: 1179px) {
+  .department .inner .wrap article {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 539px) {
+  .department .inner .wrap article {
+    width: 100%;
+  }
+}
+.youtube .inner .wrap article {
+  width: 100%;
+  padding: 20px 0px;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+}
+.youtube .inner .wrap article::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.youtube .inner .wrap article h2 {
+  width: 40%;
+  float: left;
+  padding: 40px 20px 40px 0;
+  font: normal 38px/1 "work sans";
+  color: #111;
+}
+.youtube .inner .wrap article .txt {
+  width: 30%;
+  float: left;
+  padding-right: 20px;
+}
+.youtube .inner .wrap article .txt p {
+  font: 14px/1.2 "arial";
+  color: #666;
+  margin-bottom: 40px;
+}
+.youtube .inner .wrap article .txt span {
+  font: 12px/1 "arial";
+  color: orange;
+}
+.youtube .inner .wrap article .pic {
+  width: 30%;
+  height: 200px;
+  float: left;
+}
+.youtube .inner .wrap article .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1179px) {
+  .youtube .inner .wrap article h2 {
+    width: 50%;
+    font-size: 28px;
+  }
+  .youtube .inner .wrap article .txt {
+    width: 50%;
+    padding-right: 0px;
+  }
+  .youtube .inner .wrap article .pic {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .youtube .inner .wrap article h2 {
+    width: 100%;
+    font-size: 20px;
+    padding-right: 0px;
+  }
+  .youtube .inner .wrap article .txt {
+    width: 100%;
+  }
+  .youtube .inner .wrap article .pic {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
 .signup form table {
   width: 100%;
   border: none;
