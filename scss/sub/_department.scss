@@ -40,3 +40,27 @@
 		}
 	}
 }
+
+@media screen and (max-width: $tablet) {
+	.department {
+		.inner {
+			.wrap {
+				article {
+					width: calc(100% / 2);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.department {
+		.inner {
+			.wrap {
+				article {
+					width: calc(100% / 1);
+				}
+			}
+		}
+	}
+}
