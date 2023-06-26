@@ -8,6 +8,10 @@
   <title>GALLERY</title>
   <script src="https://kit.fontawesome.com/03f02fa416.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+  <script src="js/apikey.js"></script>
+  <script defer src="js/gallery.js"></script>
+
 </head>
 
 <body>
@@ -35,10 +39,17 @@
     </div>
   </header>
 
-  <section class="content">
+  <section class="content gallery">
     <figure class="subVisual"></figure>
     <div class="inner">
       <h1>GALLERY PAGE</h1>
+      <div class="searchBox">
+        <input type="text" id="search" placeholder="검색어 입력">
+        <button class="searchBtn">Search</button>
+      </div>
+
+      <img src="imgs/bono.gif" alt="loading" class="loading">
+      <ul class="wrap"></ul>
     </div>
   </section>
 
