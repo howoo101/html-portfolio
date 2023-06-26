@@ -2,7 +2,7 @@ const wrap = document.querySelector('.youtube .wrap');
 
 fetchData();
 async function fetchData() {
-	const apiKey = 'AIzaSyBm1-5iAqRnlxETXyLSvDYAaSnMKGrr8fY';
+	const apiKey = config.youtubeApiKey;
 	const playlistId = 'PLtyGCdgf6inmUrDz2XNQJq37nfcZFOJ_M';
 	const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&key=${apiKey}&maxResults=50`;
 
