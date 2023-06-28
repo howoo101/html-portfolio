@@ -1,6 +1,6 @@
 const wrapEl = document.querySelector('.department .wrap');
 
-fetchData('../DB/department.json');
+fetchData('DB/department.json');
 
 async function fetchData(json) {
 	const resp = await fetch(json);
