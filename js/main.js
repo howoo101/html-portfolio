@@ -4,8 +4,6 @@ const baseline = -window.innerHeight / 2;
 let eventBlock = false;
 
 window.addEventListener('scroll', () => {
-	if (eventBlock) return;
-	console.log(scroll);
 	eventBlock = setTimeout(() => {
 		activeHeader();
 		handleScroll();
@@ -15,20 +13,21 @@ window.addEventListener('scroll', () => {
 
 scrollButtons.forEach((btn, idx) => {
 	btn.addEventListener('click', () => {
+		console.log(secs[idx].offsetTop + baseline);
 		window.scrollTo({ top: secs[idx].offsetTop + baseline, behavior: 'smooth' });
 	});
 });
 
 function handleScroll() {
-	const scroll = window.scrollY;
+	const scroll = parseInt(window.scrollY);
 	secs.forEach((_, idx) => {
-		if (scroll >= secs[idx].offsetTop + baseline) {
+		if (scroll >= parseInt(secs[idx].offsetTop + baseline)) {
 			for (const btn of scrollButtons) btn.classList.remove('on');
 			scrollButtons[idx].classList.add('on');
 		}
 	});
 }
-//scroll시 헤더에
+//scroll시 헤더에 배경
 function activeHeader() {
 	const header = document.querySelector('#header');
 

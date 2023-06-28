@@ -20,7 +20,7 @@ searchBtn.addEventListener('click', (e) => {
 	const value = searchInput.value.trim();
 	if (value.length === 0) fetchData(baseUrl + `${method_interest}`);
 	else {
-		const url_search = `${url}${method_search}&tags=${value}`;
+		const url_search = `${baseUrl}${method_search}&tags=${value}`;
 		fetchData(url_search);
 	}
 });
