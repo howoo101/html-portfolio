@@ -9,6 +9,7 @@
   <script src="https://kit.fontawesome.com/03f02fa416.js" crossorigin="anonymous"></script>
   <script defer type="module" src="js/scroll.js"></script>
   <script defer type="module" src="js/main.js"></script>
+  <script defer src="js/tab.js"></script>
 
 </head>
 
@@ -100,25 +101,69 @@
   </section>
 
   <section id="accessory" class="naviScroll">
-    <div class="inner">
-      <h1>traveling <span>accesssories</span></h1>
+    <h1>traveling <span>accesssories</span></h1>
+
+    <div id="tab" class="inner">
+      <ul class="tab_buttons">
+        <li class="on">가방</li>
+        <li>의류</li>
+        <li>신발</li>
+      </ul>
       <div class="wrap">
-        <article>
-          <div class="pic"><img src="imgs/bag.png" alt="가방"></div>
-          <div class="con">
-            <h2>Lorem ipsum dolor sit amet.</h2>
-            <p>$99.99</p>
-          </div>
-          <a href="#" class="more"><i class="fas fa-plus"></i></a>
-        </article>
-        <article>
-          <div class="pic"><img src="imgs/bag.png" alt="가방"></div>
-          <div class="con">
-            <h2>Lorem ipsum dolor sit amet.</h2>
-            <p>$99.99</p>
-          </div>
-          <a href="#" class="more"><i class="fas fa-plus"></i></a>
-        </article>
+        <div class="tab_items on">
+          <article>
+            <div class="pic"><img src="imgs/bag.png" alt="가방"></div>
+            <div class="con">
+              <h2>Lorem ipsum dolor sit amet.</h2>
+              <p>$11.11</p>
+            </div>
+            <a href="#" class="more"><i class="fas fa-plus"></i></a>
+          </article>
+          <article>
+            <div class="pic"><img src="imgs/bag.png" alt="가방"></div>
+            <div class="con">
+              <h2>Lorem ipsum dolor sit amet.</h2>
+              <p>$11.11</p>
+            </div>
+            <a href="#" class="more"><i class="fas fa-plus"></i></a>
+          </article>
+        </div>
+        <div class="tab_items">
+          <article>
+            <div class="pic"><img src="imgs/cloth1.png" alt="의류1"></div>
+            <div class="con">
+              <h2>Lorem ipsum dolor sit amet.</h2>
+              <p>$22.22</p>
+            </div>
+            <a href="#" class="more"><i class="fas fa-plus"></i></a>
+          </article>
+          <article>
+            <div class="pic"><img src="imgs/cloth2.png" alt="의류2"></div>
+            <div class="con">
+              <h2>Lorem ipsum dolor sit amet.</h2>
+              <p>$22.22</p>
+            </div>
+            <a href="#" class="more"><i class="fas fa-plus"></i></a>
+          </article>
+        </div>
+        <div class="tab_items">
+          <article>
+            <div class="pic"><img src="imgs/shoes1.png" alt="신발1"></div>
+            <div class="con">
+              <h2>Lorem ipsum dolor sit amet.</h2>
+              <p>$33.33</p>
+            </div>
+            <a href="#" class="more"><i class="fas fa-plus"></i></a>
+          </article>
+          <article>
+            <div class="pic"><img src="imgs/shoes2.png" alt="신발2"></div>
+            <div class="con">
+              <h2>Lorem ipsum dolor sit amet.</h2>
+              <p>$33.33</p>
+            </div>
+            <a href="#" class="more"><i class="fas fa-plus"></i></a>
+          </article>
+        </div>
       </div>
       <a href="" class="store">Go to store <i class="fas fa-arrow-right"></i></a>
     </div>

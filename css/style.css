@@ -345,11 +345,17 @@ footer .inner .link li a {
   font: 16px/50px "arial";
   border-radius: 50px;
   color: #fff;
+  transform: translateX(200px);
+  opacity: 0;
+  transition: 1s;
 }
 #choice .inner h1 {
   text-align: center;
   font: bold 22px/1 "arial";
   margin-bottom: 30px;
+  transform: translateX(200px);
+  opacity: 0;
+  transition: 1s;
 }
 #choice .inner .wrap {
   width: 100%;
@@ -360,6 +366,18 @@ footer .inner .link li a {
   width: 32%;
   margin-right: 2%;
   position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+#choice .inner .wrap article:nth-of-type(1) {
+  transition-delay: 0s;
+}
+#choice .inner .wrap article:nth-of-type(2) {
+  transition-delay: 0.1s;
+}
+#choice .inner .wrap article:nth-of-type(3) {
+  transition-delay: 0.2s;
 }
 #choice .inner .wrap article:after {
   content: "";
@@ -390,6 +408,19 @@ footer .inner .link li a {
   left: 0;
   font: 140px/1 "arial";
   color: #fff;
+}
+
+#choice.on .btn {
+  transform: translateX(0px);
+  opacity: 1;
+}
+#choice.on h1 {
+  transform: translateX(0px);
+  opacity: 1;
+}
+#choice.on .wrap article {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 @media screen and (max-width: 1179px) {
@@ -520,20 +551,21 @@ footer .inner .link li a {
 #accessory {
   width: 100%;
   background: #fff;
-  padding: 80px 0;
+  padding: 50px 0 60px;
+}
+#accessory h1 {
+  font: bold 22px/1 "arial";
+  margin-bottom: 60px;
+  text-align: center;
+  color: #444;
+}
+#accessory h1 span {
+  color: #777;
 }
 #accessory .inner {
   width: 1180px;
   margin: 0 auto;
   position: relative;
-}
-#accessory .inner h1 {
-  font: bold 22px/1 "arial";
-  margin-bottom: 30px;
-  text-align: center;
-}
-#accessory .inner h1 span {
-  color: #444;
 }
 #accessory .inner .store {
   display: block;
@@ -542,19 +574,45 @@ footer .inner .link li a {
   font: bold 16px/1 "arial";
   color: #555;
 }
+#accessory .inner .tab_buttons {
+  width: 100%;
+}
+#accessory .inner .tab_buttons::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#accessory .inner .tab_buttons li {
+  width: 33.3333333333%;
+  height: 60px;
+  float: left;
+  background: #333;
+  font: bold 18px/60px "arial";
+  color: #ccc;
+  text-align: center;
+  cursor: pointer;
+}
+#accessory .inner .tab_buttons li.on {
+  background: dodgerblue;
+  color: #fff;
+}
 #accessory .inner .wrap {
   width: 100%;
   margin-bottom: 60px;
 }
-#accessory .inner .wrap article {
+#accessory .inner .wrap .tab_items {
+  width: 100%;
+  display: none;
+}
+#accessory .inner .wrap .tab_items article {
   float: left;
-  width: 580px;
-  height: 200px;
-  margin-right: 20px;
+  width: 590px;
+  height: 300px;
+  border: 1px solid #fff;
   background: #888;
   position: relative;
 }
-#accessory .inner .wrap article .pic {
+#accessory .inner .wrap .tab_items article .pic {
   width: 200px;
   height: 100%;
   position: absolute;
@@ -563,25 +621,25 @@ footer .inner .link li a {
   transform: translateY(-40%);
   text-align: center;
 }
-#accessory .inner .wrap article .pic img {
+#accessory .inner .wrap .tab_items article .pic img {
   width: 80%;
   height: 80%;
 }
-#accessory .inner .wrap article .con {
+#accessory .inner .wrap .tab_items article .con {
   width: 300px;
   margin-left: 220px;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
-#accessory .inner .wrap article .con h2 {
+#accessory .inner .wrap .tab_items article .con h2 {
   font: bold 18px/1 "arial";
   margin-bottom: 10px;
 }
-#accessory .inner .wrap article .con p {
+#accessory .inner .wrap .tab_items article .con p {
   font: bold 18px/1 "arial";
 }
-#accessory .inner .wrap article .more {
+#accessory .inner .wrap .tab_items article .more {
   width: 50px;
   height: 50px;
   line-height: 50px;
@@ -593,41 +651,49 @@ footer .inner .link li a {
   color: #fff;
   border-radius: 30px;
 }
+#accessory .inner .wrap .tab_items.on {
+  display: block;
+}
 
 @media screen and (max-width: 1179px) {
   #accessory .inner {
     width: 100%;
   }
+  #accessory .inner .tab_buttons li {
+    height: 55px;
+  }
   #accessory .inner .wrap {
     width: 100%;
     margin-bottom: 60px;
   }
-  #accessory .inner .wrap article {
-    float: left;
-    width: 48%;
-    height: 200px;
-    margin-right: 2%;
+  #accessory .inner .wrap .tab_items {
+    width: 100%;
   }
-  #accessory .inner .wrap article .pic {
+  #accessory .inner .wrap .tab_items article {
+    float: left;
+    width: 50%;
+    height: 200px;
+  }
+  #accessory .inner .wrap .tab_items article .pic {
     width: 120px;
     height: 100%;
   }
-  #accessory .inner .wrap article .pic img {
+  #accessory .inner .wrap .tab_items article .pic img {
     width: 80%;
     height: 80%;
   }
-  #accessory .inner .wrap article .con {
+  #accessory .inner .wrap .tab_items article .con {
     width: 160px;
     margin-left: 140px;
   }
-  #accessory .inner .wrap article .con h2 {
+  #accessory .inner .wrap .tab_items article .con h2 {
     font: bold 18px/1 "arial";
     margin-bottom: 10px;
   }
-  #accessory .inner .wrap article .con p {
+  #accessory .inner .wrap .tab_items article .con p {
     font: bold 18px/1 "arial";
   }
-  #accessory .inner .wrap article .more {
+  #accessory .inner .wrap .tab_items article .more {
     width: 50px;
     height: 50px;
     line-height: 50px;
@@ -648,20 +714,23 @@ footer .inner .link li a {
     width: 100%;
     margin-bottom: 60px;
   }
-  #accessory .inner .wrap article {
+  #accessory .inner .wrap .tab_items {
+    width: 100%;
+  }
+  #accessory .inner .wrap .tab_items article {
     width: 100%;
     height: 200px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
-  #accessory .inner .wrap article .pic {
+  #accessory .inner .wrap .tab_items article .pic {
     width: 200px;
     height: 100%;
   }
-  #accessory .inner .wrap article .pic img {
+  #accessory .inner .wrap .tab_items article .pic img {
     width: 80%;
     height: 80%;
   }
-  #accessory .inner .wrap article .con {
+  #accessory .inner .wrap .tab_items article .con {
     width: 300px;
     margin-left: 220px;
   }
