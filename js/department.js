@@ -21,6 +21,7 @@ function createArticle(data) {
         <article>
           <div class='picture'>
             <img src="imgs/${picture}"/>
+						<img src="imgs/${picture}"/>
           </div>
           <div class='content'>
             <h2>${name}</h2>
