@@ -2,25 +2,20 @@ import { Anime } from './anime.js';
 
 const sections = document.querySelectorAll('.naviScroll');
 const scrollButtons = document.querySelectorAll('#naviScroll li');
-const baseline = -window.innerHeight / 2;
-let eventBlock = false;
+const baseline = -window.innerHeight / 4;
+let enableEvent = true;
 
 scrollButtons.forEach((btn, idx) => {
 	btn.addEventListener('click', () => {
-		// window.scrollTo({ top: sections[idx].offsetTop + baseline, behavior: 'smooth' });
-		if (eventBlock) return;
-		console.log(1111);
-
-		eventBlock = setTimeout((e) => {
-			moveSection(idx);
-			eventBlock = false;
-		}, 300);
+		enableEvent && moveSection(idx);
 	});
 });
 
 window.addEventListener('mousewheel', moveAuto, { passive: false });
 
 function moveAuto(e) {
+	e.preventDefault();
+
 	const activeIdx = Array.from(scrollButtons).findIndex((el) => el.className.includes('on'));
 
 	if (e.deltaY > 0) {
@@ -33,11 +28,14 @@ function moveAuto(e) {
 }
 
 function moveSection(idx) {
+	enableEvent = false;
+	let lastMove = 0;
+	if (idx === scrollButtons.length - 1) lastMove = 250;
 	new Anime(window, {
 		prop: 'scroll',
-		value: sections[idx].offsetTop + baseline,
+		value: sections[idx].offsetTop + baseline + lastMove,
 		duration: 500,
-		callback: () => (eventBlock = false),
+		callback: () => (enableEvent = true),
 	});
 }
 
