@@ -84,6 +84,9 @@ function isotopeLayout() {
 		itemSelector: '.item',
 		transitionDuration: '0.5s',
 	});
+	//이미지 렌더링 완료 및 정렬 완료 후
+	wrap.classList.add('on');
+	loading.classList.add('off');
 }
 
 function completeLoadingImages() {
@@ -98,9 +101,6 @@ function completeLoadingImages() {
 			count === images.length && isotopeLayout();
 		};
 	}
-	//이미지 렌더링 완료 및 정렬 완료 후
-	wrap.classList.add('on');
-	loading.classList.add('off');
 }
 
 // 이미지 클릭시 팝업생성
