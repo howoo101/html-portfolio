@@ -1,5 +1,42 @@
 import { handleScroll } from './scroll.js';
 
+// swiper
+const btnPlay = document.querySelector('.btnPlay');
+const btnPause = document.querySelector('.btnPause');
+
+const swiper = new Swiper('.swiper', {
+	loop: true,
+	effect: 'coverflow',
+	grabCursor: true,
+	centeredSlides: true,
+	slidesPerView: 'auto',
+	coverflowEffect: {
+		rotate: 50,
+		stretch: 0,
+		depth: 100,
+		modifier: 1,
+		slideShadows: true,
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	autoplay: {
+		delay: 2000,
+	},
+});
+
+btnPlay.addEventListener('click', () => {
+	swiper.autoplay.start();
+});
+btnPause.addEventListener('click', () => {
+	swiper.autoplay.stop();
+});
+// swiper
 let eventBlock = false;
 
 window.addEventListener('scroll', () => {

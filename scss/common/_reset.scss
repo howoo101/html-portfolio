@@ -31,11 +31,11 @@ a {
 	clear: both;
 }
 /* article float에서 마지막 요소 마진 0주기 위함 */
-.wrap > article:nth-last-of-type(1) {
+.wrap article:nth-last-of-type(1) {
 	margin: 0 !important;
 }
 
-.wrap > li:nth-last-of-type(1) {
+.wrap li:nth-last-of-type(1) {
 	margin: 0 !important;
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////

@@ -35,11 +35,11 @@ a {
 }
 
 /* article float에서 마지막 요소 마진 0주기 위함 */
-.wrap > article:nth-last-of-type(1) {
+.wrap article:nth-last-of-type(1) {
   margin: 0 !important;
 }
 
-.wrap > li:nth-last-of-type(1) {
+.wrap li:nth-last-of-type(1) {
   margin: 0 !important;
 }
 
@@ -486,7 +486,7 @@ footer .inner .link li a {
   width: 100%;
   height: 100%;
 }
-#diary .inner .wrap article {
+#diary .inner .wrap .swiper-wrapper article {
   float: left;
   width: 32%;
   height: 300px;
@@ -494,11 +494,11 @@ footer .inner .link li a {
   margin-right: 2%;
   background: #fff;
 }
-#diary .inner .wrap article h2 {
+#diary .inner .wrap .swiper-wrapper article h2 {
   font: bold 18px/1.1 "arial";
   color: #333;
 }
-#diary .inner .wrap article h2::before {
+#diary .inner .wrap .swiper-wrapper article h2::before {
   display: block;
   content: "";
   border-left: 5px solid blue;
@@ -507,17 +507,45 @@ footer .inner .link li a {
   left: -20px;
   top: 20px;
 }
-#diary .inner .wrap article span {
+#diary .inner .wrap .swiper-wrapper article span {
   display: inline-block;
   font: bold 12px/1.1 "arial";
   color: #666;
   margin-bottom: 30px;
 }
-#diary .inner .wrap article p {
+#diary .inner .wrap .swiper-wrapper article p {
   display: inline-block;
   font: bold 16px/1.3 "arial";
   color: #444;
   margin-bottom: 30px;
+}
+#diary .inner .wrap .swiper-button-next,
+#diary .inner .wrap .swiper-button-prev {
+  top: auto;
+  left: auto;
+  bottom: 0px;
+  transform: scale(0.5);
+  filter: brightness(0%) saturate(0%);
+}
+#diary .inner .wrap .swiper-button-next {
+  right: 50px;
+}
+#diary .inner .wrap .swiper-button-prev {
+  right: 100px;
+}
+#diary .inner .wrap .btnPlay,
+#diary .inner .wrap .btnPause {
+  position: absolute;
+  bottom: 0px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 25;
+}
+#diary .inner .wrap .btnPlay {
+  left: 50px;
+}
+#diary .inner .wrap .btnPause {
+  left: 100px;
 }
 
 @media screen and (max-width: 1179px) {
