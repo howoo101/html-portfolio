@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOCATION</title>
+  <script src="https://kit.fontawesome.com/03f02fa416.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0b08ba3a6afb78fbaa297e4a5d0a3642"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script defer type="module" src="js/contact.js"></script>
+</head>
+
+<body>
+  <header id="header">
+    <div class="wrap">
+      <h1>
+        <a href="index.html">LOVE TRIP</a>
+      </h1>
+      <nav>
+        <ul id="gnb" class="clearfix">
+          <li><a href="department.html">DEPARTMENT</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="youtube.html">YOUTUBE</a></li>
+          <li><a href="location.html">LOCATION</a></li>
+        </ul>
+        <ul id="search" class="clearfix">
+          <li><a href="signup.html">SIGN-UP</a></li>
+          <li><a href="#">FIND A DESTINATION</a></li>
+          <li>
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <a href="" class="btnCall"><i class="fas fa-bars"></i></a>
+    </div>
+  </header>
+
+  <section class="content contact">
+    <figure class="subVisual"></figure>
+    <div class="inner">
+      <h1>CONTACT PAGE</h1>
+
+      <div id="map">
+        <ul class="branch">
+          <li class="on">크래프톤</li>
+          <li>컴투스</li>
+          <li>카카오</li>
+        </ul>
+        <span class="btnToggle">교통정보 OFF</span>
+      </div>
+
+
+      <h2>Contact Us</h2>
+      <div class="contact-form">
+        <form id="form">
+          <input type="hidden" name="contact_number">
+          <div class="row">
+            <div class="input-group">
+              <label for="userName">이름</label>
+              <input type="text" name="user_name" id="userName" value="" placeholder="이름을 입력해 주세요">
+            </div>
+            <div class="input-group">
+              <label for="userEmail">이메일</label>
+              <input type="email" name="user_email" id="userEmail" value="" placeholder="이메일을 입력해주세요">
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="message">메시지</label>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="메시지를 입력해주세요"></textarea>
+          </div>
+          <div class="input-group">
+            <button id="submit" type="submit">보내기</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="inner clearfix">
+      <a href="#" class="copy">
+        <span>COPYRIGHT &copy 2023 ALL RIGHTS RESERVED</span></a>
+      <ul class="wrap link clearfix">
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">CONTACT</a></li>
+        <li><a href="#">Terms & Condition</a></li>
+        <li><a href="#">PRIVACY POLICY</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>

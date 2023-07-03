@@ -1,3 +1,4 @@
+import { config } from './apikey.js';
 const wrap = document.querySelector('.youtube .wrap');
 
 fetchData();
