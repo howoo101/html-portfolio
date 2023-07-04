@@ -1,3 +1,5 @@
+import { config } from './apikey.js';
+
 const wrap = document.querySelector('.gallery .wrap');
 const loading = document.querySelector('.gallery .loading');
 
